@@ -95,7 +95,7 @@ function CategoriesPage(){
 
     return (
         <div className="home-page rel">
-            <h1 className="page-title s24 fontb c333">Categories</h1>
+            <h1 className="page-title s24 fontb c333">Categorias</h1>
             <br/>
             <br/>
             <br/>

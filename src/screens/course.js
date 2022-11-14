@@ -25,7 +25,7 @@ function CoursePage(props){
             videos: [
                 {
                     ID: 1,
-                    title: "Introduction",
+                    title: "Introdução",
                     duration: "04 seg"                    
                 }
             ]
@@ -62,7 +62,7 @@ function CoursePage(props){
                         </div>
                         <div className="meta rel">
                             <h2 className="s15 name fontb c333">{course.tutor.name}</h2>
-                            <h2 className="s13 uname fontn c777">Course Tutor</h2>
+                            <h2 className="s13 uname fontn c777">Tutor</h2>
                         </div>
                     </NavLink>
                     </div>
@@ -72,7 +72,7 @@ function CoursePage(props){
                     <p className="s18 about fontn c777" dangerouslySetInnerHTML={{ __html: course.about}} />
 
                     <div className="section section-b rel">
-                        <h2 className="title s24 fontb">Course <span  className="fontn">Rewards</span></h2>
+                        <h2 className="title s24 fontb">Recompensas <span  className="fontn">do Curso</span></h2>
                         <div className="course-stats aic flex">
                             <div className="stats-box flex">
                             <img src="https://cdn.discordapp.com/attachments/973364348892373022/1040811244820627567/chapeuescuro.png" height="18px" width="17px" alt="" className="bl"/>
@@ -94,11 +94,11 @@ function CoursePage(props){
                     </div>
 
                     <div className="section section-b rel">                    
-                        <h2 className="title s24 fontb">Course <span  className="fontn">Details</span></h2>
+                        <h2 className="title s24 fontb">Detalhes <span  className="fontn">do Curso</span></h2>
                         <div className="course-videos aic flex">
                             {courseVideos}
                         </div>
-                        <Button variant="danger" disabled>Get Rewards</Button>{' '}
+                        <Button variant="danger" disabled>Resgatar Recompensas</Button>{' '}
                     </div>
 
                 </div>

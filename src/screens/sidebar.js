@@ -9,9 +9,9 @@ import {
 function Sidebar(){
 
     const [nav, setNav] = useState([
-        {label: "Home", slug: "home", icon: "icon-home"},
-        {label: "Discover", slug: "discover", icon: "icon-ul"},
-        {label: "Categories", slug: "categories", icon: "icon-tag"}
+        {label: "Inicio", slug: "home", icon: "icon-home"},
+        {label: "Descobrir", slug: "discover", icon: "icon-ul"},
+        {label: "Categorias", slug: "categories", icon: "icon-tag"}
     ])
     const [currentPage, setCurrentPage] = useState("/home");
 
@@ -62,7 +62,7 @@ function Sidebar(){
             <div className="me flex aic">
                 <NavLink to={"oauth"} className={"aic link noul flex c333"}>
                     <div className={"ico s24 rel cfff icon-portrait-male"} />
-                    <h2 className="lbl s20 fontb">Account</h2>
+                    <h2 className="lbl s20 fontb">Conta</h2>
                 </NavLink>
             </div>
         </div>

@@ -98,7 +98,7 @@ function HomePage(){
 
             {/**Popular Courses */}
             <div className="section section-b rel">
-                <h2 className="title s24 fontb">Popular <span  className="fontn">This Week</span></h2>
+                <h2 className="title s24 fontb">Popular <span  className="fontn">Nesta Semama</span></h2>
                 <div className="courses rel flex">
                     {courseList}
                 </div>
@@ -106,7 +106,7 @@ function HomePage(){
 
             {/**Top Tutors */}
             <div className="section section-b rel">
-                <h2 className="title s24 fontb">Top <span  className="fontn">Tutors</span></h2>
+                <h2 className="title s24 fontb">Tutores<span  className="fontn"></span></h2>
                 <div className="top-tutors rel flex">
                     {topTutorsList}
                 </div>

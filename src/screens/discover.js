@@ -98,7 +98,7 @@ function DiscoverPage(){
 
             {/**Popular Courses */}
             <div className="section section-b rel">
-                <h2 className="title s24 fontb">Look <span  className="fontn">These New Courses</span></h2>
+                <h2 className="title s24 fontb">Olhe <span  className="fontn">Esses Cursos</span></h2>
                 <div className="courses rel flex">
                     {courseList}
                 </div>

@@ -112,7 +112,7 @@ function Profile(){
 
     return (
         <div onLoad={Verify()} className="home-page rel">
-            <h1 className="page-title s24 fontb c333">My Courses</h1>
+            <h1 className="page-title s24 fontb c333">Meus Cursos</h1>
             {/**Popular Courses */}
             <div className="section section-b rel">
                 <div className="courses rel flex">
@@ -121,15 +121,15 @@ function Profile(){
             </div>
             <br/>
             <center>
-                <Button onClick={() => postcourse()} variant="danger">Post a Course</Button>{' '}
+                <Button onClick={() => postcourse()} variant="danger">Postar um Curso</Button>{' '}
             </center>
             <br/>
             <center>
-                <Button variant="danger" disabled>Withdrawal Rewards</Button>{' '}
+                <Button variant="danger" disabled>Sacar Recompensas</Button>{' '}
             </center>
             <br/>
             <center>
-                <Button onClick={() => changeAccount()} variant="danger">Change Account</Button>{' '}
+                <Button onClick={() => changeAccount()} variant="danger">Trocar de Conta</Button>{' '}
             </center>
         </div>
     )

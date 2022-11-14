@@ -83,7 +83,7 @@ function AccountPage(props){
                 button1.id = "btn1"
                 button1.className = "btn btn-dark"
                 button1.disabled = true
-                button1.innerText = "Install Metamask"
+                button1.innerText = "Instale a Metamask"
                 here.appendChild(button1)
               return
               })
@@ -109,14 +109,14 @@ function AccountPage(props){
     return (
         <div onLoad={Verify()} className="oauth-view rel">
             <center>
-            <h1 className="s40 otitle fontb">Sign in/Login</h1>
+            <h1 className="s40 otitle fontb">Criar/Logar</h1>
             <br/>
             <div id="here">
-                <button id="btn" class="btn btn-dark" onClick={() => connectWalletwithMetaMask()}>Connect Wallet</button>
+                <button id="btn" class="btn btn-dark" onClick={() => connectWalletwithMetaMask()}>Conectar Carteira</button>
             </div>
             <br/>
             <div class="input-group mb-3">
-                <input type="text" id="name" class="form-control" placeholder="Name" aria-label="Username" aria-describedby="basic-addon1"/>
+                <input type="text" id="name" class="form-control" placeholder="Nome" aria-label="Username" aria-describedby="basic-addon1"/>
             </div>
             <br/>
             <div class="input-group mb-3">
@@ -129,10 +129,10 @@ function AccountPage(props){
                 <input type="text" id="email" placeholder="drebas@gmail.com"  class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"/>
             </div>
             <br/>
-            <label for="inputPassword5" class="form-label">Password</label>
+            <label for="inputPassword5" class="form-label">Senha</label>
             <input type="password" id="password" placeholder="******" class="form-control" aria-describedby="passwordHelpBlock" />
             <br/>
-                <button onClick={() => mySql()} id="ok" class="btn btn-danger">Enter</button>
+                <button onClick={() => mySql()} id="ok" class="btn btn-danger">Entrar</button>
             </center>
         </div>
     )

@@ -93,7 +93,7 @@ function TutorPage(){
 
     return (
         <div className="home-page rel">
-            <h1 className="page-title s24 fontb c333">Courses of Harry</h1>
+            <h1 className="page-title s24 fontb c333">Cursos do Harry</h1>
             {/**Popular Courses */}
             <div className="section section-b rel">
                 <div className="courses rel flex">

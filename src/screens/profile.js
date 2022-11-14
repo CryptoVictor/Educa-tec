@@ -121,15 +121,15 @@ function Profile(){
             </div>
             <br/>
             <center>
+                <Button onClick={() => changeAccount()} variant="danger">Change Account</Button>{' '}
+            </center>
+            <br/>
+            <center>
                 <Button onClick={() => postcourse()} variant="danger">Post a Course</Button>{' '}
             </center>
             <br/>
             <center>
                 <Button variant="danger" disabled>Withdrawal Rewards</Button>{' '}
-            </center>
-            <br/>
-            <center>
-                <Button onClick={() => changeAccount()} variant="danger">Change Account</Button>{' '}
             </center>
         </div>
     )

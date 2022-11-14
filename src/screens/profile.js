@@ -105,6 +105,11 @@ function Profile(){
         alert("O recurso de adicionar um curso, ainda não está disponivel!");
     }
 
+    const changeAccount = () => {
+        localStorage.removeItem("name");
+        window.location.href = "/oauth";
+    }
+
     return (
         <div onLoad={Verify()} className="home-page rel">
             <h1 className="page-title s24 fontb c333">My Courses</h1>
@@ -121,6 +126,10 @@ function Profile(){
             <br/>
             <center>
                 <Button variant="danger" disabled>Withdrawal Rewards</Button>{' '}
+            </center>
+            <br/>
+            <center>
+                <Button onClick={() => changeAccount()} variant="danger">Change Account</Button>{' '}
             </center>
         </div>
     )

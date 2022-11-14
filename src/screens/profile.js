@@ -92,8 +92,21 @@ function Profile(){
         );
     }
 
+    const Verify = () => {
+
+        var logged = localStorage.getItem("name");
+
+        if (logged == undefined) {
+            window.location.href = "/oauth";
+        } 
+    }
+
+    const postcourse = () => {
+        alert("O recurso de adicionar um curso, ainda não está disponivel!");
+    }
+
     return (
-        <div className="home-page rel">
+        <div onLoad={Verify()} className="home-page rel">
             <h1 className="page-title s24 fontb c333">My Courses</h1>
             {/**Popular Courses */}
             <div className="section section-b rel">
@@ -103,7 +116,11 @@ function Profile(){
             </div>
             <br/>
             <center>
-                <Button variant="danger">Withdrawal Rewards</Button>{' '}
+                <Button onClick={() => postcourse()} variant="danger">Post a Course</Button>{' '}
+            </center>
+            <br/>
+            <center>
+                <Button variant="danger" disabled>Withdrawal Rewards</Button>{' '}
             </center>
         </div>
     )

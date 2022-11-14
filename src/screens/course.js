@@ -98,7 +98,7 @@ function CoursePage(props){
                         <div className="course-videos aic flex">
                             {courseVideos}
                         </div>
-                        <Button variant="danger">Get Rewards</Button>{' '}
+                        <Button variant="danger" disabled>Get Rewards</Button>{' '}
                     </div>
 
                 </div>

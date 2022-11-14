@@ -1,8 +1,4 @@
-import React, {useState, useEffect} from "react";
-
-import {
-    NavLink,    
-} from "react-router-dom";
+import React from "react";
 
 var mysql = require('mysql');
 
@@ -10,53 +6,85 @@ function AccountPage(props){
 
     window.userWalletAddress = null
     let walletAddress = "";
-    var one = 0;
-    var two = 0;
 
-    function mySql() {
+    const Verify = () => {
 
-        one++;
+        var logged = localStorage.getItem("name");
 
-        if(one > 1){
+        if (logged != undefined) {
 
-        var username = document.getElementById("username")
-        var email = document.getElementById("email")
-        var password = document.getElementById("password")
-
-        var con = mysql.createConnection({
-        host: "",
-        user: "",
-        password: "",
-        database: ""
-        });
-
-        con.connect(function(err) {
-            if (err) throw err;
-            var sql = `SELECT id FROM user WHERE username = ${username}`;
-            con.query(sql, function (err, result) {
-              if (err == true) {
-                console.log(err);
-              }else{
-                console.log(result.affectedRows);
-              }
-            });
-          });
-        }
-
-        one = 0;
+            window.location.href = "/profile";
+        } 
     }
 
-            function showAddress(add){
+    const mySql = () => {
+
+        var name = document.getElementById("name").value
+        var username = document.getElementById("username").value
+        var email = document.getElementById("email").value
+        var password = document.getElementById("password").value
+
+        if (name != "" & username != "" & email != "" & password != "") {
+
+            var sql = mysql.createConnection({
+                host: "https://sql10.freesqldatabase.com",
+                user: "sql10565414",
+                password: "sql10565414",
+                database: "2DCXUulnqT",
+                port: "3306"
+            });
+
+            sql = `INSERT INTO user (name = ${name}, username = ${username}, email = ${email}, password = ${password}) IF username = ${username} NOT EXISTS`;
+            sql = mysql;
+            var result = sql.error;
+
+            if (result == undefined) {
+
+                window.location.href = "/profile";
+                localStorage.setItem("name", name);
+
+            } else {
+
+            sql = `SELECT id FROM user WHERE (name = ${name}, username = ${username}, email = ${email}, password = ${password}`;
+            sql = mysql;
+            result = sql.error;
+
+            if (result == undefined) {
+
+                window.location.href = "/profile";
+                localStorage.setItem("name", name);
+                
+            } else {
+                alert("Error, try again");
+            }
+            }
+
+        } else {
+            alert("Insira todos os dados requisitados!")
+        }
+    }
+
+            const showAddress = (add) => {
                 const str1 = add[0]+add[1]+add[2]+add[3]+add[4]+add[5];
                 const str2 = add[add.length -3]+add[add.length-2]+add[add.length-1];
                 return str1 + "..." + str2;
             }
       
-            async function connectWalletwithMetaMask() {
+            const connectWalletwithMetaMask = async() => {
 
               const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' })
               .catch((e) => {
-              console.error(e.message)
+                var deleted = document.getElementById("btn")
+                deleted.parentNode.removeChild(deleted)
+  
+                var here = document.getElementById("here")
+
+                var button1 = document.createElement('button')
+                button1.id = "btn1"
+                button1.className = "btn btn-dark"
+                button1.disabled = true
+                button1.innerText = "Install Metamask"
+                here.appendChild(button1)
               return
               })
       
@@ -79,12 +107,16 @@ function AccountPage(props){
               here.appendChild(button1)
             }
     return (
-        <div className="oauth-view rel">
+        <div onLoad={Verify()} className="oauth-view rel">
             <center>
-            <h1 className="s40 otitle fontb">Login</h1>
+            <h1 className="s40 otitle fontb">Sign in/Login</h1>
             <br/>
             <div id="here">
-                <button id="btn" class="btn btn-dark" onclick={connectWalletwithMetaMask()}>Connect Wallet</button>
+                <button id="btn" class="btn btn-dark" onClick={() => connectWalletwithMetaMask()}>Connect Wallet</button>
+            </div>
+            <br/>
+            <div class="input-group mb-3">
+                <input type="text" id="name" class="form-control" placeholder="Name" aria-label="Username" aria-describedby="basic-addon1"/>
             </div>
             <br/>
             <div class="input-group mb-3">
@@ -94,19 +126,13 @@ function AccountPage(props){
             <br/>
             <div class="input-group mb-3">
                 <span class="input-group-text" id="inputGroup-sizing-default">Email</span>
-                <input type="text" id="email" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"/>
+                <input type="text" id="email" placeholder="drebas@gmail.com"  class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"/>
             </div>
             <br/>
             <label for="inputPassword5" class="form-label">Password</label>
-            <input type="password" id="password" class="form-control" aria-describedby="passwordHelpBlock" />
+            <input type="password" id="password" placeholder="******" class="form-control" aria-describedby="passwordHelpBlock" />
             <br/>
-            <NavLink to={"oauth"} className={"aic link noul"}>
-                <button class="btn btn-danger">Login</button>
-            </NavLink>
-            <span>&nbsp;&nbsp;</span>
-            <NavLink to={"sigin"} className={"aic link noul"}>
-                <button class="btn btn-danger">Sign In</button>
-            </NavLink>
+                <button onClick={() => mySql()} id="ok" class="btn btn-danger">Enter</button>
             </center>
         </div>
     )

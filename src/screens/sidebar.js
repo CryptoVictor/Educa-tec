@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import logo from '../ui/educatec preto.png';
-import Button from 'react-bootstrap/Button';
 
 import {
     NavLink,    
@@ -45,7 +44,7 @@ function Sidebar(){
                 <div className="stats-box flex">
                     <img src="https://cdn.discordapp.com/attachments/973364348892373022/1040811244820627567/chapeuescuro.png" height="18px" width="17px" alt="" className="bl"/>
                     <br/>
-                    <h2 className="val s15 c333 fontb">100</h2>
+                    <h2 className="val s15 c333 fontb">0</h2>
                     <h2 className="lbl s13 c777">TEC</h2>
                 </div>
 
@@ -56,7 +55,7 @@ function Sidebar(){
                         <path d="M8 13.5a5.5 5.5 0 1 1 0-11 5.5 5.5 0 0 1 0 11zm0 .5A6 6 0 1 0 8 2a6 6 0 0 0 0 12z"/>
                     </svg>
                     <br/>
-                    <h2 className="val s15 c333 fontb">30</h2>
+                    <h2 className="val s15 c333 fontb">0</h2>
                     <h2 className="lbl s13 c777">USD</h2>
                 </div>
             </div>
@@ -64,12 +63,6 @@ function Sidebar(){
                 <NavLink to={"oauth"} className={"aic link noul flex c333"}>
                     <div className={"ico s24 rel cfff icon-portrait-male"} />
                     <h2 className="lbl s20 fontb">Account</h2>
-                </NavLink>
-            </div>
-            <div className="me flex aic">
-                <NavLink to={"sigin"} className={"aic link noul flex c333"}>
-                    <div className={"ico s24 rel cfff icon-portrait-female"} />
-                    <h2 className="lbl s20 fontb">Sign In</h2>
                 </NavLink>
             </div>
         </div>

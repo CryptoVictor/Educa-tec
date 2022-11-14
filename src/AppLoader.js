@@ -9,19 +9,17 @@ import "./css/App.css";
 import {
     Route,
     NavLink,
-    HashRouter
+    BrowserRouter
 } from "react-router-dom";
 
 //Screen
 import Header from "./screens/header";
 import Sidebar from "./screens/sidebar";
 import HomePage from "./screens/home";
-import Rightbar from "./screens/rightbar";
 import CoursePage from "./screens/course";
 import DiscoverPage from "./screens/discover";
 import CategoriesPage from "./screens/categories";
 import AccountPage from "./screens/oauth";
-import SiginPage from "./screens/sigin";
 import TutorPage from "./screens/profiletutor";
 import Profile from "./screens/profile";
 
@@ -84,7 +82,7 @@ export default function AppLoader(){
                     return (
                         context.appLoaded() ? 
                         <div className="App flex">      
-                            <HashRouter>
+                            <BrowserRouter>
                                 <Sidebar />
                                 <div className="app-content">
                                     <Route exact path="/" component={AccountPage} />
@@ -93,11 +91,10 @@ export default function AppLoader(){
                                     <Route path="/discover" component={DiscoverPage} />
                                     <Route path="/categories" component={CategoriesPage} />
                                     <Route path="/oauth" component={AccountPage} />
-                                    <Route path="/sigin" component={SiginPage} />
                                     <Route path="/profiletutor" component={TutorPage} />
                                     <Route path="/profile" component={Profile} />
                                 </div>    
-                            </HashRouter>    
+                            </BrowserRouter>    
                         </div>
                         : 
                         <AppContext.Consumer>

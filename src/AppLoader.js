@@ -17,6 +17,7 @@ import Header from "./screens/header";
 import Sidebar from "./screens/sidebar";
 import HomePage from "./screens/home";
 import CoursePage from "./screens/course";
+import CoursePage2 from "./screens/course2";
 import DiscoverPage from "./screens/discover";
 import CategoriesPage from "./screens/categories";
 import AccountPage from "./screens/oauth";
@@ -88,6 +89,7 @@ export default function AppLoader(){
                                     <Route exact path="/" component={AccountPage} />
                                     <Route path="/home" component={HomePage} />
                                     <Route path="/course1" component={CoursePage} />
+                                    <Route path="/course2" component={CoursePage2} />
                                     <Route path="/discover" component={DiscoverPage} />
                                     <Route path="/categories" component={CategoriesPage} />
                                     <Route path="/oauth" component={AccountPage} />

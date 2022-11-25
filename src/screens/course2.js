@@ -1,32 +1,33 @@
 import React, {useState} from "react";
 import Course1 from "../ui/course-1.png";
+import Course2 from "../ui/course-2.jpg";
 import Button from 'react-bootstrap/Button';
 
 import {
     NavLink,    
 } from "react-router-dom";
 
-function CoursePage(props){
+function CoursePage2(props){
 
     const [course, setCourse] = useState(
         {
             ID: 1,
-            title: "Curso de Web 3.0",
-            about: "Este curso conta com o caminho completo para o pleno conhecimento em desenvolvimento Web 3.0, indo da base teorica da blockchain até a pratica com os smart contracts do ethereum.",
+            title: "Curso de Investimento",
+            about: "Aprenda a investir melhor em um curso facil e intuitivo de aprendizado, indo do basico ao avançado em pouco tempo.",
             tutor: {
                 ID: 1,
                 name: "Harry",
                 username: "harry",
                 dp: "https://cdn.discordapp.com/attachments/973364348892373022/1040721944200351754/Screenshot_from_2022-11-11_17-16-07.png",
             },
-            duration: "04 seg",             
-            poster: Course1,
+            duration: "02 seg",             
+            poster: Course2,
 
             videos: [
                 {
                     ID: 1,
                     title: "Introdução",
-                    duration: "04 seg"                    
+                    duration: "02 seg"                    
                 }
             ]
         }
@@ -77,7 +78,7 @@ function CoursePage(props){
                             <div className="stats-box flex">
                             <img src="https://cdn.discordapp.com/attachments/973364348892373022/1040811244820627567/chapeuescuro.png" height="18px" width="17px" alt="" className="bl"/>
                                 <br/>
-                                <h2 className="val s15 c333 fontb">1000</h2>
+                                <h2 className="val s15 c333 fontb">500</h2>
                                 <h2 className="lbl s13 c777">TEC</h2>
                             </div>
                             <div className="stats-box flex">
@@ -87,7 +88,7 @@ function CoursePage(props){
                                 <path d="M8 13.5a5.5 5.5 0 1 1 0-11 5.5 5.5 0 0 1 0 11zm0 .5A6 6 0 1 0 8 2a6 6 0 0 0 0 12z"/>
                             </svg>
                                 <br/>
-                                <h2 className="val s15 c333 fontb">300</h2>
+                                <h2 className="val s15 c333 fontb">150</h2>
                                 <h2 className="lbl s13 c777">USD</h2>
                             </div>
                         </div>
@@ -109,7 +110,7 @@ function CoursePage(props){
 
                 <div className="player rel">
                 <video width="750" height="500" controls >
-                    <source src="https://cdn.discordapp.com/attachments/973364348892373022/1041123199112450218/Video.mp4" type="video/mp4"/>
+                    <source src="https://cdn.discordapp.com/attachments/973364348892373022/1045712660697731132/Video2.mp4" type="video/mp4"/>
                 </video>
                 </div>
             </div>
@@ -117,4 +118,4 @@ function CoursePage(props){
     )
 }
 
-export default CoursePage;
+export default CoursePage2;

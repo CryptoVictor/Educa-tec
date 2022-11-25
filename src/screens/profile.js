@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from "react";
 import Course1 from "../ui/course-1.png";
+import Course2 from "../ui/course-2.jpg";
 import Button from 'react-bootstrap/Button';
 
 import {
@@ -22,8 +23,20 @@ function Profile(){
                 username: "harry",
                 dp: "https://cdn.discordapp.com/attachments/973364348892373022/1040721944200351754/Screenshot_from_2022-11-11_17-16-07.png",
             },
-            duration: "1200 min",            
+            duration: "04 seg",            
             poster: Course1
+        },
+        {
+            ID: 2,
+            title: "Curso de Investimento",
+            tutor: {
+                ID: 1,
+                name: "Harry",
+                username: "harry",
+                dp: "https://cdn.discordapp.com/attachments/973364348892373022/1040721944200351754/Screenshot_from_2022-11-11_17-16-07.png",
+            },
+            duration: "02 seg",               
+            poster: Course2
         }
     ]);
 
